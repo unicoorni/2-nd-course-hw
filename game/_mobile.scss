@@ -1,0 +1,86 @@
+@media (max-width: 767px) {
+    .center {
+        padding-right: calc(50% - 172px);
+        padding-left: calc(50% - 172px);
+    }
+
+    .top {
+        min-height: 735px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 239px;
+        }
+
+        &__title {
+            max-width: 343px;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+        }
+
+        &__desc {
+            max-width: 343px;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 13px;
+        }
+
+    }
+
+    .menu-game {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+
+        &__item {
+            width: 343px;
+        }
+    }
+
+    .game-seasons {
+        gap: 64px;
+        padding-top: 50px;
+        padding-bottom: 85px;
+        &__menu {
+            display: flex;
+            align-items: center;
+        }
+        &__name {
+            text-align: center;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+        &__desc {
+            text-align: center;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    .game-riddle {
+        
+        min-height: 800px;
+        &__menu {
+            padding-top: 51px;
+            max-width: 343px; 
+        }
+        &__name {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+        &__desc {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+         }
+    }
+
+
+}
