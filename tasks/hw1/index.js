@@ -14,6 +14,7 @@
 //  alert(a+b);
 //  alert(b - a);
 //  alert(b/a);
+// alert(b*a);
 
 // task4
 // let a = 'Брендан Эйх ';
@@ -55,9 +56,17 @@ let user = {
 console.log(user);
 
 // task9.1
-user.cityOfResidence = 'moscow';
+user['city Of Residence'] = 'moscow';
 
 // task9.2
+
+user.age = 3333;
+
+// 9.3
+
+delete user['city Of Residence'];
+
+// task9.4
 
 let info = prompt('какую информацию Вы хотите узнать о пользователе?');
 alert(user[info]);
