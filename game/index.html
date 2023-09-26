@@ -26,6 +26,37 @@
         <a href="#game2" class="menu-game__item menu-game__item_2">Игра 2</a>
         <a href="#game3" class="menu-game__item menu-game__item_3">Игра 3</a>
     </div>
+    <section id="game1">
+        <div class="game-seasons center">
+            <div class="game-seasons__menu">
+                <h2 class="game-seasons__name">Времена года!</h2>
+                <p class="game-seasons__desc">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к
+                    какому времени года он относится</p>
+                <a onclick="game1()" class="btn" href="#">Играть!</a>
+            </div>
+            <div class="game-seasons__img"><img src="img/svg.svg" alt="pic">
+            </div>
+        </div>
+    </section>
+    <script>
+        function game1() {
+            let month=Number(prompt('Введите номер месяца:'));
+            function seasons(num) {
+                if (num <= 0 || num > 12) {
+                    alert('Такого месяца нет((');
+                } else if (num === 1 || num === 2 || num === 12) {
+                    alert('Зима');
+                } else if (num >= 3 && num <= 5) {
+                    alert('Весна');
+                } else if (num>=6 && num<=8) {
+                    alert('Лето');
+                } else {
+                    alert('Осень');
+                }
+            }
+            seasons(month);
+        }
+    </script>
 
     <footer class="footer">
         <p class="footer__text">Все права защищены</p>
