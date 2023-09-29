@@ -13,7 +13,7 @@ smallerNum(2,7);
 // task2
 
 function parity(a) {
-    if (a%2==0) {
+    if (a%2===0) {
         console.log('Число четное');
     } else {
         console.log('число нечетное');
@@ -25,7 +25,7 @@ parity(3);
 
 // task3.1
 
-function square(a) {
+function logSquare(a) {
     console.log(a**2);
 }
 
@@ -33,7 +33,7 @@ square(2);
 
 // task3.2
 
-function square(b) {
+function returnSquare(b) {
     return b**2;
 }
 
@@ -42,44 +42,49 @@ square(2);
 
 // task4
 
-let age = prompt('Сколько Вам лет?');
+let age = prompt('Сколько Вам лет?').trim();
+
 
 function greeting(age) {
-    if (age<0) {
+    if (isNaN(age) || age == false ) {
         alert('вы ввели неправильное число')
     } else if (age>=0 && age<=12) {
         alert('Привет, друг!')    
-    } else {
+    } else if (age>12) {
         alert('Добро пожаловать!')    
+    } else {
+        alert('Похоже вы еще не родились')
     }
 }
 
 greeting(age);
 
+
+
 // task5
 
-let c = prompt('Введите число');
-let d = prompt('Введите число');
+let c = prompt('Введите число').trim();
+let d = prompt('Введите число').trim();
 
 
-function isNumber(c,d) {
-    if (isNaN(c) || isNaN(d)) {
+function isNumber(num1,num2) {
+    if (isNaN(num1) || isNaN(num2) || num2 == false || num1 == false) {
         // console.log('Одно или оба значения не являются числом');
-        return ('Одно или оба значения не являются числом');
+        return ('Одно или оба значения не являются числом')    
     } else {
-        // console.log(c*d);
-        return c*d;
+        // console.log(num2*num1);
+        return num1*num2;
     }
 }
 
-// isNumber(c,d);
+isNumber(c,d);
 
 // task6
 
-let n = prompt('Введите число и я возведу его в куб');
+let n = prompt('Введите число и я возведу его в куб').trim();
 
 function cube(n) {
-    if (isNaN(n)) {
+    if (isNaN(n) || n == false) {
         console.log('Переданный параметр не является числом');
     } else {
         console.log(n**3);
