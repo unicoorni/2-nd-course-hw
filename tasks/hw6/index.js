@@ -3,7 +3,7 @@
 const arr = [1, 5, 4, 10, 0, 3];
 
 for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == 10) break;
+    if (arr[i] == 0) break;
     console.log(arr[i]);
 }
 
@@ -62,7 +62,7 @@ if (arr.includes(userNum)) {
 let words = 'abcdef';
 const splitWords = words.split('')
 const rvrsWords = splitWords.reverse();
-console.log(rvrsWords);
+console.log(rvrsWords.join(''));
 
 // task9
 
@@ -100,12 +100,11 @@ const randomArr = [1, 2, 3, 3];
 
 squareArr(randomArr);
 
-
 // task12
 
 const getLengthWords = arr => arr.map(str => str.length);
 
-console.log(getLengthWords(['один', 'два', 'восемь']));
+console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
 
 
 // task13
