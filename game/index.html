@@ -60,6 +60,41 @@
         }
     </script>
 
+<section id="game2">
+    <div class="game-memory game-seasons center">
+        <div class="game-memory__menu game-seasons__menu">
+            <h2 class="game-memory__name game-seasons__name">Запомни слова</h2>
+            <p class="game-memory__desc game-seasons__desc">При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.</p>
+            <a onclick="game2()" class="btn" href="#">Играть!</a>
+        </div>
+        <div class="game-seasons__img"><img src="img/game2.svg" alt="pic">
+        </div>
+    </div>
+</section>
+<script>
+    function game2 () {
+        let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+
+            fruits.sort(() => Math.random() - 0.5);
+
+            alert(fruits);
+
+            let firstEl = prompt('Чему равнялся первый элемент массива?');
+            let lastEl = prompt('Чему равнялся последний элемент массива?');
+
+            if (firstEl.toLowerCase() == fruits[0].toLowerCase() && lastEl.toLowerCase() == fruits[6].toLowerCase()) {
+                    alert('Позравляю!!! У Вас отличная память))');
+                } else if (firstEl.toLowerCase() == fruits[0].toLowerCase() || lastEl.toLowerCase() == fruits[6].toLowerCase()) {
+                    alert('Вы были близки к победе!');
+                }
+                else {
+                    alert('Вы ответили неверно((( Не расстраивайтесь, еще всё впереди!');
+
+                }
+        
+    }
+</script>
+
     <footer class="footer">
         <p class="footer__text">Все права защищены</p>
     </footer>
