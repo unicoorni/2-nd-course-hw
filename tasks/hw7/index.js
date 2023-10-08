@@ -1,6 +1,6 @@
 
 // task1
-
+/*
 let word = 'js';
 
 console.log(word.toUpperCase());
@@ -8,8 +8,8 @@ console.log(word.toUpperCase());
 // task2
 
 const stringArray = (arr, str) => {
-    str.toLowerCase();
-    console.log(arr.filter(el=> el.toLowerCase().startsWith(str)));
+
+    console.log(arr.filter(el=> el.toLowerCase().startsWith(str.toLowerCase())));
 }
 
 stringArray(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
@@ -35,7 +35,7 @@ console.log(Math.max(52, 53, 49, 77, 21, 32));
 
 function randomArray () {
     let arr = [];
-    for (let i = 0; i < 10; i++ ) {
+    for (let i = 1; i < 10; i++ ) {
         arr.push(Math.round(Math.random()*10));
         console.log(arr);
 }
@@ -50,11 +50,14 @@ function getRandomArrNumbers(randomNum) {
     let arr = [];
     for (let i = 0; i < Math.floor(randomNum/2); i++ ) {
         arr.push(Math.round(Math.random()*randomNum));
-        console.log(arr);
+        
 }
+console.log(arr);
+
 
 }
 getRandomArrNumbers(7);
+
 
 // task7
 
@@ -74,24 +77,40 @@ console.log(currentDate);
 
 let currentDate = new Date();
 console.log(+currentDate);
+let day = currentDate.getDate();
+console.log(day);
+// let days73 = 73 * 24 * 60 * 60 * 1000;
+// let searchDate = currentDate + days73;
+// let daysAfter73 = new Date(searchDate);
+// console.log(daysAfter73);
 
-let days73 = 73 * 24 * 60 * 60 * 1000;
+let futureDate = currentDate.setDate(73+day);
 
-let searchDate = currentDate + days73;
 
-let daysAfter73 = new Date(searchDate);
-console.log(daysAfter73);
+console.log(futureDate);
+
+
+*/
 
 
 
 // task10
-// что-то не знаю как это делать
-// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь","Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-// let myDate = new Date(); 
-// let fullDate = "Сегодня: " + myDate.getDate() + 
-// " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
 
-// function userDate (params) {
-    
-// }
+
+
+function userDate () {
+    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь","Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let myDate = new Date(); 
+
+    let hour = myDate.getHours(); 
+    let minute = myDate.getMinutes(); 
+    let second = myDate.getSeconds(); 
+
+    let fullDate = `Сегодня: ${myDate.getDate()} ${months[myDate.getMonth()]} ${myDate.getFullYear()} - это ${days[myDate.getDay()]} 
+    Время: ${hour}:${minute}:${second}`;
+
+    console.log(fullDate);
+}
+
+userDate();
