@@ -21,19 +21,9 @@ function isPositive(arr) {
         }
     }
 
-function isMale(arr) {
-        for (const key in arr) {
-            if (key == "gender" && arr[key] == 'male') {
-                return true;
-                // console.log(true);
-            } else {
-                return false;
-                // console.log(false);
-
-            }
-        }
-
-    }
+function isMale(person) {
+    return person.gender === 'male';
+}
 
     const people = [
         {name: 'Глеб', gender: 'male'},
@@ -106,4 +96,6 @@ function sayHi (name) {
 }
 
 
-delayForSecond(sayHi('Глеб'));
+delayForSecond(sayHi => ('Глеб'));
+
+
