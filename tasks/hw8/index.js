@@ -79,7 +79,7 @@ delayForSecond(function () {
 })
 
 
-// task5 ничего не получилось
+// task5 
 
 
 function delayForSecond(cb) {
@@ -96,6 +96,6 @@ function sayHi (name) {
 }
 
 
-delayForSecond(sayHi => ('Глеб'));
+delayForSecond( () => sayHi  ('Глеб'));
 
 
